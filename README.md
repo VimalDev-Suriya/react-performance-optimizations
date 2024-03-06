@@ -21,4 +21,7 @@ When we render a component, React creates a virtual DOM for its element tree in 
 ## Performance Optimization techniques:
 
 1. Code splitting (Manage to make the state update as local as possible)
-2. Memoization 
+2. Memoization (Caching the props value between the renders)
+3. UseMemo (Caching the expensive values between the renders)
+4. UseCallback (Caching the functions between the renders)
+5. Lazyloading
