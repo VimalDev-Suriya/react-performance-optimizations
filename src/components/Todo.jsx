@@ -38,9 +38,24 @@ const Todos = () => {
       <UserSelect val={user} onChange={(e) => setUser(e.target.value)} />
 
       <div className="btn-group">
-        <button onClick={() => setTab("all")}>All</button>
-        <button onClick={() => setTab("active")}>Active</button>
-        <button onClick={() => setTab("completed")}>Completed</button>
+        <button
+          className={tab === "all" ? "active" : ""}
+          onClick={() => setTab("all")}
+        >
+          All
+        </button>
+        <button
+          className={tab === "active" ? "active" : ""}
+          onClick={() => setTab("active")}
+        >
+          Active
+        </button>
+        <button
+          className={tab === "completed" ? "active" : ""}
+          onClick={() => setTab("completed")}
+        >
+          Completed
+        </button>
       </div>
 
       <TodoList todos={todos} activeTab={tab} />

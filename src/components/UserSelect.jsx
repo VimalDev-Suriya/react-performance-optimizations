@@ -2,7 +2,7 @@ const UserSelect = (props, ref) => {
   const { onChange, val } = props ?? {};
 
   return (
-    <label>
+    <label className="mb1">
       Select the User :
       <select name="user" onChange={onChange} value={val}>
         <option value="1">1</option>

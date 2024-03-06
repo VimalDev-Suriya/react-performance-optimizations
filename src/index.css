@@ -41,3 +41,17 @@ body {
 .h100vh {
   height: 100vh;
 }
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  width: 12rem;
+}
+
+.btn-group > .active {
+  outline: 1px solid red;
+}
+
+.mb1 {
+  margin-bottom: 1rem;
+}

@@ -26,17 +26,18 @@ const Memoization = () => {
 export default Memoization;
 
 /* 
-// Memoization is a programming technique
+// Memoization is a programming tech
 
-// Store (Cache)
+// Store (Cache) - the input and output
 a= 1; b=2 res=3
 
 const func1 = (a, b) => {
- return a+b;
+ return a + b;
 }
 
-console.log(func1(1,2)) // 3 (code execution)
-console.log(func1(1,2)) // 3 (from cache)
-console.log(func1(2,1)) // 3 (code execution)
-console.log(func1(1,2)) // 3 (code execution)
+func1(1,2) // 3 (code execution)
+func1(1,2) // 3 (from cache)
+
+func1(2,1) // 3 (code execution)
+func1(1,2) // 3 (code execution)
 */
