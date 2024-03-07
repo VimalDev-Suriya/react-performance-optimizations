@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { Suspense, lazy, useState } from "react";
 import { delayComp } from "../utils";
-import LazylyLoaded from "./LazylyLoaded";
+// import LazylyLoaded from "./LazylyLoaded";
+
+const LazylyLoaded = lazy(() => import("./LazylyLoaded"));
 
 const LazyComponent = () => {
   const [showPreview, setShowPreview] = useState(false);
@@ -16,7 +18,11 @@ const LazyComponent = () => {
         Show preview
       </label>
 
-      {showPreview ? <LazylyLoaded /> : null}
+      {showPreview ? (
+        <Suspense fallback={<div>Loading</div>}>
+          <LazylyLoaded />
+        </Suspense>
+      ) : null}
     </div>
   );
 };

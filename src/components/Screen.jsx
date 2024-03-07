@@ -14,7 +14,7 @@ const Screen = () => {
           <Link to={"/use-memo"}>Usememo</Link>
         </li>
         <li>
-          <Link to={"/lazy"}>Usememo</Link>
+          <Link to={"/lazy"}>Lazy load</Link>
         </li>
       </ul>
     </div>

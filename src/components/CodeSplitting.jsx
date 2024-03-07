@@ -1,19 +1,12 @@
-import { useState } from "react";
 import ChildComponent from "./ChildComponent";
+import FormInput from "./FormInput";
 
-// Fragments, Local Stateupdate
+// Code Spilitting.
+// on the point of indepedant state management
 const CodeSplitting = () => {
-  const [input, setInput] = useState("");
-
   return (
     <div>
-      <h1>Parent Component</h1>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <h3>Entered text: {input}</h3>
+      <FormInput />
       <hr />
       <ChildComponent />
     </div>

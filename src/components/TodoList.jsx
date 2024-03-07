@@ -1,19 +1,25 @@
+import { useMemo } from "react";
 import TodoItem from "./TodoItem";
 
 const TodoList = (props) => {
   const { todos, activeTab } = props ?? {};
 
-  const todosToBeDisplayed = todos.filter((todo) => {
-    if (activeTab === "all") {
-      return true;
-    }
-    if (activeTab === "active") {
-      return !todo.completed;
-    }
-    if (activeTab === "completed") {
-      return todo.completed;
-    }
-  });
+  // 
+  const todosToBeDisplayed = useMemo(
+    () =>
+      todos.filter((todo) => {
+        if (activeTab === "all") {
+          return true;
+        }
+        if (activeTab === "active") {
+          return !todo.completed;
+        }
+        if (activeTab === "completed") {
+          return todo.completed;
+        }
+      }),
+    [activeTab]
+  );
 
   if (!todosToBeDisplayed.length) {
     return <h1>No Todos</h1>;

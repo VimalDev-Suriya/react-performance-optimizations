@@ -20,6 +20,8 @@ When we render a component, React creates a virtual DOM for its element tree in 
 
 ## Performance Optimization techniques:
 
+We can prevent the unwanted re-render of the components, by following techniques
+
 1. Code.
 2. Packages, Bundling.
 
